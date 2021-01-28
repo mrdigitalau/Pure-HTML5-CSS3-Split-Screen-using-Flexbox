@@ -1,0 +1,108 @@
+body {
+
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+}
+
+
+.wrapper .left,
+.wrapper .right {
+      width: 100%;
+      height: 50vh;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+
+.wrapper .image {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: 0.25s ease all;
+}
+
+
+.dog {
+      background: url('images/dog.jpg');
+}
+
+.cat {
+      background: url('images/cat.jpg');
+}
+
+
+
+.wrapper .caption {
+      position: relative;
+      z-index: 10;
+      color: #fff;
+      text-align: center;
+}
+
+
+.wrapper .caption h1 {
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      margin-bottom:1em;
+}
+
+
+.wrapper .caption .button {
+      background: #000;
+      color: #fff;
+      padding: 1em 2em;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1em;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: 0.25s ease all;
+}
+
+
+.wrapper .caption .button:hover {
+      background: #ffd346;
+      color: #000;
+}
+
+
+.wrapper .side::before {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.6979166666666667) 0%, rgba(0, 0, 0, 0.2721463585434174) 100%);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      content: '';
+      display: block;
+}
+
+
+.wrapper .left:hover .image,
+.wrapper .right:hover .image {
+      transform: scale(1.2);
+}
+
+@media screen and (min-width:1200px) {
+
+      .wrapper {
+            display: flex;
+      }
+
+
+      .wrapper .left,
+      .wrapper .right {
+            width: 50%;
+            height: 100vh;
+      }
+
+}
